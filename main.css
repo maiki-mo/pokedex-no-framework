@@ -1,0 +1,401 @@
+body, p, main, header {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  font-family: 'Press Start 2P', cursive; }
+
+li {
+  list-style-type: none; }
+
+body {
+  background-color: white;
+  min-width: 1000px; }
+
+#big-container {
+  width: 500px;
+  height: 500px; }
+
+hr {
+  margin: 0 60px 0 60px;
+  color: black;
+  background-color: black; }
+
+#hr-one {
+  border: 2px purple solid;
+  background-color: black; }
+
+#hr-two {
+  border: 2px blue solid;
+  background-color: black; }
+
+/* intro screen */
+.load {
+  z-index: -1;
+  background-color: white;
+  text-align: center;
+  opacity: 1;
+  animation-name: fade-in;
+  animation-delay: 7s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards;
+  text-align: center; }
+
+.load > p {
+  font-size: 50px;
+  position: relative;
+  animation-name: load;
+  margin-top: -10%;
+  animation-delay: 1s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear; }
+
+.load > p > span {
+  font-size: 25px;
+  position: relative;
+  bottom: 30px; }
+
+/* header with hr and text */
+header {
+  z-index: 3;
+  position: relative;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  border-radius: 50px 50px 0 0;
+  background-color: grey;
+  font-size: 12px;
+  justify-content: center;
+  height: 100px;
+  width: 97vw; }
+
+#header-text {
+  z-index: 2;
+  padding: 0 20px;
+  position: absolute;
+  right: 10vw;
+  top: 20%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.2vw;
+  color: white;
+  background-color: grey;
+  letter-spacing: 6px; }
+
+/* display screen and footer area */
+.wrapper {
+  margin-left: 1vw;
+  margin-bottom: 1vw;
+  display: grid;
+  grid-template-columns: 27vw 50vw 20vw;
+  grid-template-rows: 48vw 200px; }
+
+.grid-box1 {
+  grid-row: 1;
+  grid-column: 1;
+  background-color: grey;
+  text-align: center; }
+
+#light {
+  margin-left: 43%;
+  margin-top: 70%;
+  height: 40px;
+  width: 40px;
+  background-color: black;
+  border-radius: 20px;
+  animation-name: turn-on;
+  animation-delay: 0.5s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; }
+
+.grid-box1 > p {
+  margin-top: 0;
+  font-size: 3vw;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  letter-spacing: 6px; }
+
+.grid-box2 {
+  grid-row: 1;
+  grid-column: 2; }
+
+.grid-box3 {
+  grid-row: 1;
+  grid-column: 3;
+  background-color: grey; }
+
+footer {
+  width: 100%;
+  grid-column: 1/4;
+  grid-row: 2;
+  background-color: grey;
+  border-radius: 0 0 250px 50px; }
+
+/* main content includes trainer name, pokemon image, and pokemon HP including arrows */
+.not-load {
+  position: relative;
+  z-index: 4;
+  margin-top: -53%;
+  opacity: 0;
+  animation-name: fade-out;
+  animation-delay: 7s;
+  animation-duration: 0.1s;
+  animation-fill-mode: forwards; }
+
+#content-header {
+  width: 90%;
+  height: 10vw;
+  padding: 0;
+  margin: 2.5vw 0 0 3vw;
+  border-radius: 0;
+  background-color: white;
+  font-size: 2vw; }
+
+#trainer-name {
+  font-size: 1.8vw;
+  position: relative;
+  right: 1.7vw; }
+
+#lvl {
+  margin: 0;
+  font-size: 1.5vw;
+  position: absolute;
+  top: 2.3vw;
+  left: 4vw;
+  bottom: 1vw; }
+
+#content-main {
+  width: 100%;
+  height: 24vw;
+  padding: 0;
+  margin: 0;
+  border-radius: 0; }
+
+#trainer {
+  height: 20vw;
+  width: 20vw;
+  margin: 4vw 0 0 2vw;
+  background-color: white; }
+
+#arrow-balls {
+  width: 25vw;
+  position: relative;
+  top: 0vw;
+  right: 0vw; }
+
+.image-info {
+  z-index: 4;
+  position: relative;
+  bottom: 35vw;
+  left: 30vw;
+  width: 10vw;
+  display: none; }
+
+.img-size {
+  width: 15vw;
+  height: 15vw; }
+
+#content-footer {
+  width: 100%;
+  height: 14vw;
+  border-radius: 0;
+  background-color: white; }
+
+.menu {
+  position: relative;
+  bottom: 13vw;
+  left: 22vw; }
+
+#pkmn {
+  width: 8vw; }
+
+#menu-arrow {
+  width: 2vw;
+  position: relative;
+  bottom: 0.7vw;
+  left: 0.5vw;
+  visibility: hidden; }
+
+#abl-arrow {
+  width: 1vw;
+  position: relative;
+  bottom: 0.1vw;
+  visibility: hidden; }
+
+#abl-list {
+  visibility: hidden;
+  position: relative;
+  bottom: 1vw;
+  right: 1.5vw;
+  width: 20vw; }
+
+#ab2 {
+  margin-top: 0.5vw; }
+
+#arr-hover {
+  width: 10vw; }
+
+#arr-hover:hover #abl-arrow {
+  visibility: visible; }
+
+#arrow-reverse {
+  position: relative;
+  top: 0.05vw;
+  width: 1vw; }
+
+.info {
+  position: relative;
+  bottom: 2vw;
+  width: 20vw; }
+
+.info * {
+  font-size: 1.5vw; }
+
+#lvl-display {
+  position: relative;
+  left: 6vw;
+  bottom: 0.85vw;
+  font-size: 1.2vw; }
+
+.menu:hover #menu-arrow {
+  visibility: visible; }
+
+#margin {
+  position: relative;
+  bottom: 0.8vw;
+  left: 0.50vw;
+  width: 49vw; }
+
+/* individual pokemon on screen */
+.pokemon {
+  position: relative;
+  left: 22vw;
+  bottom: 13.2vw;
+  display: none;
+  width: 30vw; }
+
+#vap-arrow, #jlt-arrow, #flr-arrow {
+  width: 2vw; }
+
+#vap-arrow {
+  position: relative;
+  bottom: 0.3vw;
+  visibility: hidden; }
+
+#vap-text {
+  font-size: 2vw;
+  position: relative;
+  left: 3.5vw;
+  bottom: 2.6vw;
+  width: 8vw; }
+
+#flr-arrow {
+  position: relative;
+  bottom: 3.3vw;
+  right: 3.7vw;
+  visibility: hidden; }
+
+#flr-text {
+  font-size: 2vw;
+  position: relative;
+  bottom: 5.6vw;
+  width: 8vw; }
+
+#jlt-arrow {
+  position: relative;
+  bottom: 6.1vw;
+  visibility: hidden; }
+
+#jlt-text {
+  font-size: 2vw;
+  position: relative;
+  bottom: 8.4vw;
+  left: 3.6vw;
+  width: 8vw; }
+
+#poke1 {
+  font-size: 2vw;
+  position: relative;
+  left: 14vw;
+  bottom: 3.2vw;
+  width: 30vw; }
+
+#poke1:hover #vap-arrow {
+  visibility: visible; }
+
+#poke2:hover #flr-arrow {
+  visibility: visible; }
+
+#poke3:hover #jlt-arrow {
+  visibility: visible; }
+
+#poke3 {
+  font-size: 2vw;
+  position: relative;
+  left: 14vw;
+  bottom: 1.1vw;
+  width: 30vw; }
+
+#poke2 {
+  font-size: 2vw;
+  position: relative;
+  left: 4.2vw;
+  top: 1vw;
+  width: 30vw; }
+
+#attack {
+  width: 20vw; }
+
+/* selected pokemon information and picture */
+#poke-name {
+  font-size: 1.5vw;
+  position: relative;
+  bottom: 1vw;
+  left: 2.7vw;
+  text-transform: uppercase; }
+
+#poke-image {
+  width: 15vw;
+  position: relative;
+  left: 1.2vw; }
+
+/* sub footer */
+.sub > p {
+  font-family: 'Poller One', cursive;
+  text-transform: uppercase;
+  font-size: 4vw;
+  color: blue;
+  position: relative;
+  bottom: 2.5vw;
+  width: 90vw; }
+
+#tm {
+  font-size: 2vw; }
+
+#sub-footer {
+  color: blue;
+  font-family: 'Racing Sans One', cursive;
+  font-size: 9vw; }
+
+/* animations */
+@keyframes load {
+  from {
+    margin-top: -10%; }
+  to {
+    margin-top: 45%; } }
+@keyframes fade-in {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fade-out {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes turn-on {
+  from {
+    background-color: black; }
+  to {
+    background-color: red; } }
+
+/*# sourceMappingURL=main.css.map */
