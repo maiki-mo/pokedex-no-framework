@@ -71,19 +71,31 @@ function changePokemon(id){
 function vaporeonFunc() {
   changePokemon(0);
   var imgInfo = document.querySelector(".image-info");
+	var targ = document.querySelector(".pokemon");
+	targ.style.display = "none";
   imgInfo.style.display = "block";
+  let moveMarg = document.querySelector("#marg-img");
+  moveMarg.src = "images/new-margin-vap.png";
 }
 
 function jolteonFunc() {
   changePokemon(1);
   var imgInfo = document.querySelector(".image-info");
   imgInfo.style.display = "block";
+	var targ = document.querySelector(".pokemon");
+  targ.style.display = "none";
+  let moveMarg = document.querySelector("#marg-img");
+  moveMarg.src = "images/new-margin-jolt.png";
 }
 
 function flareonFunc() {
   changePokemon(2);
   var imgInfo = document.querySelector(".image-info");
   imgInfo.style.display = "block";
+	var targ = document.querySelector(".pokemon");
+  targ.style.display = "none";
+  let moveMarg = document.querySelector("#marg-img");
+  moveMarg.src = "images/new-margin-flr.png";
 }
 
 //targets items to change pokemon
@@ -95,30 +107,50 @@ joltTarg.addEventListener("click", jolteonFunc);
 var flarTarg = document.querySelector("#poke2");
 flarTarg.addEventListener("click", flareonFunc);
 
-var ablTarg = document.querySelector("#abilities");
-ablTarg.addEventListener("click", dispAbl);
+// var ablTarg = document.querySelector("#abilities");
+// ablTarg.addEventListener("click", dispAbl);
 
 var pkmnMenu = document.querySelector(".menu");
 pkmnMenu.addEventListener("click", pokeMenu);
 
-function dispAbl() {
-  let targ = document.querySelector("#abl-list");
-    if (targ.style.visibility === "hidden") {
-      targ.style.visibility = "visible";
-    } else {
-      targ.style.visibility = "hidden";
-    }
-}
+// function dispAbl() {
+//   let targ = document.querySelector("#abl-list");
+//     if (targ.style.visibility === "hidden") {
+//       targ.style.visibility = "visible";
+//     } else {
+//       targ.style.visibility = "hidden";
+//     }
+// }
 
 //main pkmn menu will reveal/take away individual pokemon
 
 function pokeMenu() {
   let targ = document.querySelector(".pokemon");
+  var imgInfo = document.querySelector(".image-info");
+    if (imgInfo.style.display === "block") {
+      imgInfo.style.display = "none";
+    }
     if (targ.style.display === "block") {
       targ.style.display = "none";
     } else {
       targ.style.display = "block";
     }
+    let moveMarg = document.querySelector(".new-margin");
+  if (moveMarg.style.visibility === "visible") {
+    moveMarg.style.visibility = "hidden";
+  }
+}
+
+let moveTarg = document.querySelector("#move-arrow");
+moveTarg.addEventListener("click", moveDisplay);
+
+function moveDisplay() {
+  let moveMarg = document.querySelector(".new-margin");
+  if (moveMarg.style.visibility === "hidden") {
+    moveMarg.style.visibility = "visible";
+  } else {
+    moveMarg.style.visibility = "hidden";
+  }
 }
 
 
@@ -128,3 +160,9 @@ function pokeMenu() {
 // base df: response.data.stats[3].base_stat;
 // abilities: response.data.abilities followed by [0] or [1] and .ability and .name
 // name of pokemon: response.data.forms[0].name
+
+// movsets
+//pokeDex[id].moves[13].move.name = "hyper beam"
+//pokeDex[id].moves[17].move.name = "quick-attack"
+//pokeDex[id].moves[14].move.name = "blizzard"
+//pokeDex[id].moves[18].move.name = "strength"
