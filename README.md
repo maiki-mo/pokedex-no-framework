@@ -4,4 +4,4 @@ Based around a fictional trainer gym, with a UI similar to the battle screen in 
 
 ## Notes
 
-This is just a prototype, as the final project will involve a framework of some kind.  But, because I like the challenge, I decided to do everything with vanilla CSS and make it work.  The page is somewhat responsive, but will lose integrity with very large, or very small windows.
+Original version incorporated a materialize framework, but I wanted to create a better version using vanilla CSS.
